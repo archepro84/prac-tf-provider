@@ -1,0 +1,17 @@
+# Dependency directories
+node_modules/
+
+# parcel-bundler cache (https://parceljs.org/)
+.parcel-cache
+
+# Nuxt.js build / generate output
+dist
+
+# Gatsby files
+.cache/
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+
+.idea
+.DS_Store
