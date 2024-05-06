@@ -4,6 +4,7 @@ import (
 	"context"
 	"github.com/hashicorp/terraform-plugin-framework/datasource"
 	"github.com/hashicorp/terraform-plugin-framework/provider"
+	"github.com/hashicorp/terraform-plugin-framework/resource"
 )
 
 var _ provider.Provider = (*nullProvider)(nil)
@@ -26,4 +27,13 @@ func (p *nullProvider) DataSources(ctx context.Context) []func() datasource.Data
 	return []func() datasource.DataSource{
 		NewNullDataSource,
 	}
+}
+func (p *nullProvider) Resources(ctx context.Context) []func() resource.Resource {
+	return []func() resource.Resource{
+		NewNullResource,
+	}
+}
+
+func (p *nullProvider) Schema(ctx context.Context, request provider.SchemaRequest, response *provider.SchemaResponse) {
+
 }
